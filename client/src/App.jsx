@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
+import Home from "../pages/Home";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const location = useLocation();
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+
+  useEffect(() => {
+    // Check for token whenever route changes
+    setIsLoggedIn(!!localStorage.getItem("token"));
+  }, [location]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Routes>
+      <Route
+        path="/"
+        element={isLoggedIn ? <Home /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/signup"
+        element={!isLoggedIn ? <Signup /> : <Navigate to="/" />}
+      />
+      <Route
+        path="/login"
+        element={!isLoggedIn ? <Login /> : <Navigate to="/" />}
+      />
+    </Routes>
+  );
+};
 
-export default App
+export default App;

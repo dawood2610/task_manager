@@ -1,0 +1,67 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #bfbfbf; /* Soft dark grey */
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Topbar (Logout + Welcome Text) */
+  .topbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* space between logout and welcome */
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+  
+  .logoutBtn {
+    background-color: transparent;
+    color: #800000;
+    border: 1px solid #800000;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .logoutBtn:hover {
+    background-color: #ffcccc;
+  }
+  
+  .userText {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333333;
+  }
+  
+  /* Add Task Button */
+  .addBtn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    background: #f5f5dc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .addBtn:hover {
+    background-color: #e8e8c4;
+  }
+  
+  /* Task List Container */
+  .taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  

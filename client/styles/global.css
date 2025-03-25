@@ -1,0 +1,27 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #333333; /* ✅ Full-page dark grey background */
+  }
+  
+  /* Optional: smooth font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Fullscreen utility class (optional) */
+  .fullScreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333333;
+  }
+  

@@ -1,0 +1,47 @@
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card.done {
+    background-color: #f5f5dc;
+    opacity: 0.85;
+    text-decoration: line-through;
+  }
+  
+  h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  button {
+    background-color: #f5f5dc;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .deleteBtn {
+    background-color: #ffe0e0;
+    color: #900;
+  }
+  
